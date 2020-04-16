@@ -6,7 +6,7 @@
 use Symfony\Component\DependencyInjection\Dumper\Preloader;
 
 require dirname(__DIR__, 3).'/vendor/autoload.php';
-require __DIR__.'/Container4gCaxFV/App_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerL1kpTYL/App_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -31,6 +31,7 @@ $classes[] = 'App\Controller\AdminController';
 $classes[] = 'App\Controller\FrontController';
 $classes[] = 'App\Repository\CategoryRepository';
 $classes[] = 'App\Repository\VideoRepository';
+$classes[] = 'App\Utils\CategoryTreeFrontPage';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\Controller\RedirectController';
 $classes[] = 'Symfony\Bundle\FrameworkBundle\Controller\TemplateController';
 $classes[] = 'Symfony\Component\Cache\DoctrineProvider';
@@ -419,6 +420,7 @@ $classes[] = 'Symfony\Bridge\Twig\Extension\FormExtension';
 $classes[] = 'Symfony\Bridge\Twig\Extension\LogoutUrlExtension';
 $classes[] = 'Symfony\Bridge\Twig\Extension\SecurityExtension';
 $classes[] = 'Symfony\Bridge\Twig\Extension\DumpExtension';
+$classes[] = 'App\Twig\AppExtension';
 $classes[] = 'Doctrine\Bundle\DoctrineBundle\Twig\DoctrineExtension';
 $classes[] = 'Symfony\Bundle\WebProfilerBundle\Twig\WebProfilerExtension';
 $classes[] = 'Symfony\Component\VarDumper\Dumper\HtmlDumper';

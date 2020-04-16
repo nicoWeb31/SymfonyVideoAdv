@@ -22,7 +22,6 @@ return [
         '/admin/upload-videos' => [[['_route' => 'upload_videos', '_controller' => 'App\\Controller\\AdminController::uploadVideos'], null, null, null, false, false, null]],
         '/admin/users' => [[['_route' => 'users', '_controller' => 'App\\Controller\\AdminController::users'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\FrontController::index'], null, null, null, false, false, null]],
-        '/video-list' => [[['_route' => 'video_list', '_controller' => 'App\\Controller\\FrontController::videolist'], null, null, null, false, false, null]],
         '/video-details' => [[['_route' => 'video_details', '_controller' => 'App\\Controller\\FrontController::videodetails'], null, null, null, false, false, null]],
         '/search-results' => [[['_route' => 'search_results', '_controller' => 'App\\Controller\\FrontController::searchResult'], null, ['POST' => 0], null, false, false, null]],
         '/pricing' => [[['_route' => 'pricing', '_controller' => 'App\\Controller\\FrontController::pricing'], null, null, null, false, false, null]],
@@ -47,6 +46,7 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
+                .'|/video\\-list/category/([^/,]++),([^/]++)(*:209)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -56,8 +56,9 @@ return [
         116 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
-        159 => [
-            [['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null],
+        159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
+        209 => [
+            [['_route' => 'video_list', '_controller' => 'App\\Controller\\FrontController::videolist'], ['categoryname', 'id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

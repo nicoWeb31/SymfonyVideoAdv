@@ -76,29 +76,29 @@ class __TwigTemplate_b8c55721a463f0f635caa5d9d5c3c0f8228e32d7bda5daa5b0a5bf570a7
         // line 16
         echo "        ";
         $this->displayBlock('menu', $context, $blocks);
-        // line 38
+        // line 35
         echo "
         ";
-        // line 39
+        // line 36
         $this->displayBlock('body', $context, $blocks);
-        // line 40
+        // line 37
         echo "        ";
         $this->displayBlock('footer', $context, $blocks);
-        // line 80
+        // line 77
         echo "    </div>
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src=\"";
-        // line 84
+        // line 81
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/jquery.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 85
+        // line 82
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/popper.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 86
+        // line 83
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/bootstrap.js"), "html", null, true);
         echo "\"></script>
 
@@ -111,9 +111,9 @@ class __TwigTemplate_b8c55721a463f0f635caa5d9d5c3c0f8228e32d7bda5daa5b0a5bf570a7
     });
     </script>
  ";
-        // line 96
+        // line 93
         $this->displayBlock('javascriptsCustom', $context, $blocks);
-        // line 98
+        // line 95
         echo "
 </body>
 
@@ -208,37 +208,19 @@ class __TwigTemplate_b8c55721a463f0f635caa5d9d5c3c0f8228e32d7bda5daa5b0a5bf570a7
             </form>
 
             <nav class=\"my-2 my-md-0 mr-md-3\">
-                <a class=\"p-2 text-dark\" href=\"";
-        // line 27
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("video_list");
-        echo "\">Funny</a>
-                <a class=\"p-2 text-dark\" href=\"";
+                    ";
         // line 28
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("video_list");
-        echo "\">Scary</a>
-                <a class=\"p-2 text-dark\" href=\"";
-        // line 29
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("video_list");
-        echo "\">Unbelievable</a>
-                <a class=\"p-2 text-dark\" href=\"";
-        // line 30
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("video_list");
-        echo "\">Inspirational</a>
-                <a class=\"p-2 text-dark\" href=\"";
-        // line 31
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("video_list");
-        echo "\">Motivating</a>
-                <a class=\"p-2 text-dark\" href=\"";
-        // line 32
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_main_page");
-        echo "\">My account</a>
+        echo "                ";
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("App\\Controller\\FrontController::mainCategories"));
+        echo "  
+
             </nav>
             <a class=\"btn btn-outline-primary mr-2\" href=\"";
-        // line 34
+        // line 31
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("pricing");
         echo "\">Sign up</a>
             <a class=\"btn btn-outline-primary\" href=\"";
-        // line 35
+        // line 32
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("login");
         echo "\">Sign in</a>
         </div>
@@ -251,7 +233,7 @@ class __TwigTemplate_b8c55721a463f0f635caa5d9d5c3c0f8228e32d7bda5daa5b0a5bf570a7
 
     }
 
-    // line 39
+    // line 36
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -269,7 +251,7 @@ class __TwigTemplate_b8c55721a463f0f635caa5d9d5c3c0f8228e32d7bda5daa5b0a5bf570a7
 
     }
 
-    // line 40
+    // line 37
     public function block_footer($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -279,7 +261,7 @@ class __TwigTemplate_b8c55721a463f0f635caa5d9d5c3c0f8228e32d7bda5daa5b0a5bf570a7
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 41
+        // line 38
         echo "        <footer class=\"pt-4 my-md-5 pt-md-5 border-top\">
             <div class=\"row\">
                 <div class=\"col-12 col-md\">
@@ -327,7 +309,7 @@ class __TwigTemplate_b8c55721a463f0f635caa5d9d5c3c0f8228e32d7bda5daa5b0a5bf570a7
 
     }
 
-    // line 96
+    // line 93
     public function block_javascriptsCustom($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -357,7 +339,7 @@ class __TwigTemplate_b8c55721a463f0f635caa5d9d5c3c0f8228e32d7bda5daa5b0a5bf570a7
 
     public function getDebugInfo()
     {
-        return array (  331 => 96,  283 => 41,  273 => 40,  255 => 39,  242 => 35,  238 => 34,  233 => 32,  229 => 31,  225 => 30,  221 => 29,  217 => 28,  213 => 27,  204 => 21,  199 => 19,  195 => 17,  185 => 16,  167 => 15,  149 => 10,  130 => 6,  117 => 98,  115 => 96,  102 => 86,  98 => 85,  94 => 84,  88 => 80,  85 => 40,  83 => 39,  80 => 38,  77 => 16,  75 => 15,  69 => 11,  67 => 10,  63 => 9,  57 => 6,  50 => 1,);
+        return array (  313 => 93,  265 => 38,  255 => 37,  237 => 36,  224 => 32,  220 => 31,  213 => 28,  204 => 21,  199 => 19,  195 => 17,  185 => 16,  167 => 15,  149 => 10,  130 => 6,  117 => 95,  115 => 93,  102 => 83,  98 => 82,  94 => 81,  88 => 77,  85 => 37,  83 => 36,  80 => 35,  77 => 16,  75 => 15,  69 => 11,  67 => 10,  63 => 9,  57 => 6,  50 => 1,);
     }
 
     public function getSourceContext()
@@ -388,12 +370,9 @@ class __TwigTemplate_b8c55721a463f0f635caa5d9d5c3c0f8228e32d7bda5daa5b0a5bf570a7
             </form>
 
             <nav class=\"my-2 my-md-0 mr-md-3\">
-                <a class=\"p-2 text-dark\" href=\"{{path('video_list')}}\">Funny</a>
-                <a class=\"p-2 text-dark\" href=\"{{path('video_list')}}\">Scary</a>
-                <a class=\"p-2 text-dark\" href=\"{{path('video_list')}}\">Unbelievable</a>
-                <a class=\"p-2 text-dark\" href=\"{{path('video_list')}}\">Inspirational</a>
-                <a class=\"p-2 text-dark\" href=\"{{path('video_list')}}\">Motivating</a>
-                <a class=\"p-2 text-dark\" href=\"{{path('admin_main_page')}}\">My account</a>
+                    {# appeller du partial via le controller #}
+                {{render(controller(\"App\\\\Controller\\\\FrontController::mainCategories\"))}}  
+
             </nav>
             <a class=\"btn btn-outline-primary mr-2\" href=\"{{path('pricing')}}\">Sign up</a>
             <a class=\"btn btn-outline-primary\" href=\"{{path('login')}}\">Sign in</a>

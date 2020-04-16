@@ -22,7 +22,7 @@ return [
     'upload_videos' => [[], ['_controller' => 'App\\Controller\\AdminController::uploadVideos'], [], [['text', '/admin/upload-videos']], [], []],
     'users' => [[], ['_controller' => 'App\\Controller\\AdminController::users'], [], [['text', '/admin/users']], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\FrontController::index'], [], [['text', '/']], [], []],
-    'video_list' => [[], ['_controller' => 'App\\Controller\\FrontController::videolist'], [], [['text', '/video-list']], [], []],
+    'video_list' => [['categoryname', 'id'], ['_controller' => 'App\\Controller\\FrontController::videolist'], [], [['variable', ',', '[^/]++', 'id', true], ['variable', '/', '[^/,]++', 'categoryname', true], ['text', '/video-list/category']], [], []],
     'video_details' => [[], ['_controller' => 'App\\Controller\\FrontController::videodetails'], [], [['text', '/video-details']], [], []],
     'search_results' => [[], ['_controller' => 'App\\Controller\\FrontController::searchResult'], [], [['text', '/search-results']], [], []],
     'pricing' => [[], ['_controller' => 'App\\Controller\\FrontController::pricing'], [], [['text', '/pricing']], [], []],
