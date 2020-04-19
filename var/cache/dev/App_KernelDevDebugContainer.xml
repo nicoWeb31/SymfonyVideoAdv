@@ -338,6 +338,10 @@
     <service id="App\Twig\AppExtension" class="App\Twig\AppExtension" autowire="true" autoconfigure="true">
       <tag name="twig.extension"/>
     </service>
+    <service id="App\Utils\AbstractClasses\CategoryTreeAdmin" class="App\Utils\AbstractClasses\CategoryTreeAdmin" autowire="true" autoconfigure="true">
+      <argument type="service" id="doctrine.orm.default_entity_manager"/>
+      <argument type="service" id="router.default"/>
+    </service>
     <service id="App\Utils\CategoryTreeFrontPage" class="App\Utils\CategoryTreeFrontPage" autowire="true" autoconfigure="true">
       <argument type="service" id="doctrine.orm.default_entity_manager"/>
       <argument type="service" id="router.default"/>
@@ -4820,16 +4824,33 @@
         <argument>make:migration</argument>
       </call>
     </service>
+    <service id=".service_locator.zeU3Yx2" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="categoryTreeAdmin" type="service" id="App\Utils\AbstractClasses\CategoryTreeAdmin"/>
+      </argument>
+    </service>
+    <service id=".service_locator.aU9dB2t" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="category" type="service" id=".errored..service_locator.aU9dB2t.App\Entity\Category"/>
+        <argument key="man" type="service" id="doctrine.orm.default_entity_manager"/>
+      </argument>
+    </service>
     <service id=".service_locator.NkPm19r" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="categoryTreeFrontPage" type="service" id="App\Utils\CategoryTreeFrontPage"/>
       </argument>
     </service>
-    <service id=".service_locator.f.j6rFY" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.Xn5GAsp" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Controller\AdminController::categories" type="service" id=".service_locator.zeU3Yx2"/>
+        <argument key="App\Controller\AdminController::deleteCategory" type="service" id=".service_locator.aU9dB2t"/>
         <argument key="App\Controller\FrontController::videolist" type="service" id=".service_locator.NkPm19r"/>
+        <argument key="App\Controller\AdminController:categories" type="service" id=".service_locator.zeU3Yx2"/>
+        <argument key="App\Controller\AdminController:deleteCategory" type="service" id=".service_locator.aU9dB2t"/>
         <argument key="App\Controller\FrontController:videolist" type="service" id=".service_locator.NkPm19r"/>
       </argument>
     </service>
@@ -5266,12 +5287,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.f.j6rFY"/>
+      <argument type="service" id=".service_locator.Xn5GAsp"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.f.j6rFY"/>
+      <argument type="service" id=".service_locator.Xn5GAsp"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -5281,6 +5302,7 @@
       </call>
       <factory class="Symfony\Component\HttpClient\HttpClient" method="create"/>
     </service>
+    <service id=".errored..service_locator.aU9dB2t.App\Entity\Category" class="App\Entity\Category"/>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id=".service_locator.ubu8cSs"/>
       <argument type="collection">
@@ -5649,7 +5671,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.f.j6rFY"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.Xn5GAsp"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

@@ -2,7 +2,8 @@
 
 return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
     $o = [
-        clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\ManyToOne'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ManyToOne')),
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ManyToOne'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ManyToOne')),
+        clone ($p['Doctrine\\ORM\\Mapping\\JoinColumn'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\JoinColumn')),
     ],
     null,
     [
@@ -13,10 +14,17 @@ return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\
             'inversedBy' => [
                 'subcategories',
             ],
+            'name' => [
+                1 => 'parent_id',
+            ],
+            'onDelete' => [
+                1 => 'CASCADE',
+            ],
         ],
     ],
     [
         $o[0],
+        $o[1],
     ],
     []
 ); }];

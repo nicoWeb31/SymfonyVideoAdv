@@ -97,50 +97,12 @@ class __TwigTemplate_9b7fef74b7e4849702f161a83c704589fabeb8dcd715560755a0d941d31
 
         // line 15
         echo "
-
 <h2>Categories list</h2>
 
-<ul class=\"fa-ul text-left\">
-    <li><i class=\"fa-li fa fa-arrow-right\"></i>Funny <a href=\"";
-        // line 20
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("edit_category");
-        echo "\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-                href=\"#\">delete</a></li>
-    <ul class=\"fa-ul text-left\">
-        <li><i class=\"fa-li fa fa-arrow-right\"></i>For kids <a href=\"";
-        // line 23
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("edit_category");
-        echo "\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-                href=\"#\">delete</a></li>
-        <li><i class=\"fa-li fa fa-arrow-right\"></i>For adults <a href=\"#\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-                href=\"#\">delete</a></li>
-        <ul class=\"fa-ul text-left\">
-            <li><i class=\"fa-li fa fa-arrow-right\"></i>Strange <a href=\"#\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-                    href=\"#\">delete</a></li>
-        </ul>
-    </ul>
-    <li><i class=\"fa-li fa fa-arrow-right\"></i>Scary <a href=\"#\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-            href=\"#\">delete</a></li>
-    <li><i class=\"fa-li fa fa-arrow-right\"></i>Unbelievable <a href=\"#\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-            href=\"#\">delete</a></li>
-    <li><i class=\"fa-li fa fa-arrow-right\"></i>Inspirational <a href=\"#\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-            href=\"#\">delete</a></li>
-    <li><i class=\"fa-li fa fa-arrow-right\"></i>Motivating <a href=\"#\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-            href=\"#\">delete</a></li>
-    <li><i class=\"fa-li fa fa-arrow-right\"></i>Surprising <a href=\"#\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-            href=\"#\">delete</a></li>
-    <li><i class=\"fa-li fa fa-arrow-right\"></i>Sad</li>
-    <ul class=\"fa-ul text-left\">
-        <li><i class=\"fa-li fa fa-arrow-right\"></i>Strange <a href=\"#\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-                href=\"#\">delete</a></li>
-        <ul class=\"fa-ul text-left\">
-            <li><i class=\"fa-li fa fa-arrow-right\"></i>Boring <a href=\"#\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-                    href=\"#\">delete</a></li>
-        </ul>
-    </ul>
-    <li><i class=\"fa-li fa fa-arrow-right\"></i>Relaxing <a href=\"#\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-            href=\"#\">delete</a></li>
-</ul>
+";
+        // line 18
+        echo (isset($context["categoryTreeAdmin"]) || array_key_exists("categoryTreeAdmin", $context) ? $context["categoryTreeAdmin"] : (function () { throw new RuntimeError('Variable "categoryTreeAdmin" does not exist.', 18, $this->source); })());
+        echo "
 
 <form action=\"#\" method=\"POST\">
     <div class=\"col-md-4 mb-3\">
@@ -163,7 +125,6 @@ class __TwigTemplate_9b7fef74b7e4849702f161a83c704589fabeb8dcd715560755a0d941d31
         <button class=\"btn btn-primary mt-3\" type=\"submit\">Add</button>
     </div>
 </form>
-
 
 ";
         
@@ -186,7 +147,7 @@ class __TwigTemplate_9b7fef74b7e4849702f161a83c704589fabeb8dcd715560755a0d941d31
 
     public function getDebugInfo()
     {
-        return array (  112 => 23,  106 => 20,  99 => 15,  89 => 14,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  104 => 18,  99 => 15,  89 => 14,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -206,44 +167,9 @@ class __TwigTemplate_9b7fef74b7e4849702f161a83c704589fabeb8dcd715560755a0d941d31
 
 {% block mainAdmin %}
 
-
 <h2>Categories list</h2>
 
-<ul class=\"fa-ul text-left\">
-    <li><i class=\"fa-li fa fa-arrow-right\"></i>Funny <a href=\"{{path('edit_category')}}\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-                href=\"#\">delete</a></li>
-    <ul class=\"fa-ul text-left\">
-        <li><i class=\"fa-li fa fa-arrow-right\"></i>For kids <a href=\"{{path('edit_category')}}\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-                href=\"#\">delete</a></li>
-        <li><i class=\"fa-li fa fa-arrow-right\"></i>For adults <a href=\"#\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-                href=\"#\">delete</a></li>
-        <ul class=\"fa-ul text-left\">
-            <li><i class=\"fa-li fa fa-arrow-right\"></i>Strange <a href=\"#\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-                    href=\"#\">delete</a></li>
-        </ul>
-    </ul>
-    <li><i class=\"fa-li fa fa-arrow-right\"></i>Scary <a href=\"#\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-            href=\"#\">delete</a></li>
-    <li><i class=\"fa-li fa fa-arrow-right\"></i>Unbelievable <a href=\"#\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-            href=\"#\">delete</a></li>
-    <li><i class=\"fa-li fa fa-arrow-right\"></i>Inspirational <a href=\"#\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-            href=\"#\">delete</a></li>
-    <li><i class=\"fa-li fa fa-arrow-right\"></i>Motivating <a href=\"#\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-            href=\"#\">delete</a></li>
-    <li><i class=\"fa-li fa fa-arrow-right\"></i>Surprising <a href=\"#\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-            href=\"#\">delete</a></li>
-    <li><i class=\"fa-li fa fa-arrow-right\"></i>Sad</li>
-    <ul class=\"fa-ul text-left\">
-        <li><i class=\"fa-li fa fa-arrow-right\"></i>Strange <a href=\"#\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-                href=\"#\">delete</a></li>
-        <ul class=\"fa-ul text-left\">
-            <li><i class=\"fa-li fa fa-arrow-right\"></i>Boring <a href=\"#\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-                    href=\"#\">delete</a></li>
-        </ul>
-    </ul>
-    <li><i class=\"fa-li fa fa-arrow-right\"></i>Relaxing <a href=\"#\">edit</a> <a onclick=\"return confirm('Are you sure?');\"
-            href=\"#\">delete</a></li>
-</ul>
+{{categoryTreeAdmin|raw}}
 
 <form action=\"#\" method=\"POST\">
     <div class=\"col-md-4 mb-3\">
@@ -266,7 +192,6 @@ class __TwigTemplate_9b7fef74b7e4849702f161a83c704589fabeb8dcd715560755a0d941d31
         <button class=\"btn btn-primary mt-3\" type=\"submit\">Add</button>
     </div>
 </form>
-
 
 {% endblock %}", "admin/categories.html.twig", "/opt/lampp/htdocs/SymfonyVideoAdvence/templates/admin/categories.html.twig");
     }

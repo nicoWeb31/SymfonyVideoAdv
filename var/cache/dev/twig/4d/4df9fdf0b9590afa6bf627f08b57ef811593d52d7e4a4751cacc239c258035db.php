@@ -89,19 +89,11 @@ class __TwigTemplate_fbe60d4414ea2dd47ed96dee367a100ba3035e5b580f8aca91a33c06826
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src=\"";
-        // line 81
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/jquery.js"), "html", null, true);
-        echo "\"></script>
-    <script src=\"";
-        // line 82
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/popper.js"), "html", null, true);
-        echo "\"></script>
-    <script src=\"";
-        // line 83
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/js/bootstrap.js"), "html", null, true);
-        echo "\"></script>
-
+    ";
+        // line 84
+        echo "    <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>
+    <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>
+    <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\" integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\"></script>
 
 <script>
     \$('input[type=\"file\"]').change(function (e) {
@@ -111,9 +103,9 @@ class __TwigTemplate_fbe60d4414ea2dd47ed96dee367a100ba3035e5b580f8aca91a33c06826
     });
     </script>
  ";
-        // line 93
-        $this->displayBlock('javascriptsCustom', $context, $blocks);
         // line 95
+        $this->displayBlock('javascriptsCustom', $context, $blocks);
+        // line 97
         echo "
 </body>
 
@@ -309,7 +301,7 @@ class __TwigTemplate_fbe60d4414ea2dd47ed96dee367a100ba3035e5b580f8aca91a33c06826
 
     }
 
-    // line 93
+    // line 95
     public function block_javascriptsCustom($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -339,7 +331,7 @@ class __TwigTemplate_fbe60d4414ea2dd47ed96dee367a100ba3035e5b580f8aca91a33c06826
 
     public function getDebugInfo()
     {
-        return array (  313 => 93,  265 => 38,  255 => 37,  237 => 36,  224 => 32,  220 => 31,  213 => 28,  204 => 21,  199 => 19,  195 => 17,  185 => 16,  167 => 15,  149 => 10,  130 => 6,  117 => 95,  115 => 93,  102 => 83,  98 => 82,  94 => 81,  88 => 77,  85 => 37,  83 => 36,  80 => 35,  77 => 16,  75 => 15,  69 => 11,  67 => 10,  63 => 9,  57 => 6,  50 => 1,);
+        return array (  305 => 95,  257 => 38,  247 => 37,  229 => 36,  216 => 32,  212 => 31,  205 => 28,  196 => 21,  191 => 19,  187 => 17,  177 => 16,  159 => 15,  141 => 10,  122 => 6,  109 => 97,  107 => 95,  94 => 84,  88 => 77,  85 => 37,  83 => 36,  80 => 35,  77 => 16,  75 => 15,  69 => 11,  67 => 10,  63 => 9,  57 => 6,  50 => 1,);
     }
 
     public function getSourceContext()
@@ -424,10 +416,12 @@ class __TwigTemplate_fbe60d4414ea2dd47ed96dee367a100ba3035e5b580f8aca91a33c06826
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src=\"{{asset('assets/js/jquery.js')}}\"></script>
-    <script src=\"{{asset('assets/js/popper.js')}}\"></script>
-    <script src=\"{{asset('assets/js/bootstrap.js')}}\"></script>
-
+    {# // <script src=\"{{asset('assets/js/jquery.js')}}\"></script>
+    // <script src=\"{{asset('assets/js/popper.js')}}\"></script>
+    // <script src=\"{{asset('assets/js/bootstrap.js')}}\"></script> #}
+    <script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" integrity=\"sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n\" crossorigin=\"anonymous\"></script>
+    <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" integrity=\"sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo\" crossorigin=\"anonymous\"></script>
+    <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\" integrity=\"sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6\" crossorigin=\"anonymous\"></script>
 
 <script>
     \$('input[type=\"file\"]').change(function (e) {

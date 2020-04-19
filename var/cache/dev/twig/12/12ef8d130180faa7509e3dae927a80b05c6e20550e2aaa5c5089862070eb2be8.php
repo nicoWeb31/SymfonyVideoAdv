@@ -77,7 +77,10 @@ class __TwigTemplate_31e6a4c4f01c3a2df453eb25e02e7996256d53706cfa1583c5b09a763ac
     <section class=\"jumbotron text-center\">
         <div class=\"container\">
 
-            <h1 class=\"jumbotron-heading\">Category - Funny</h1>
+            <h1 class=\"jumbotron-heading\">Category - ";
+        // line 13
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["subcategories"]) || array_key_exists("subcategories", $context) ? $context["subcategories"] : (function () { throw new RuntimeError('Variable "subcategories" does not exist.', 13, $this->source); })()), "currentCategoryName", [], "any", false, false, false, 13), "html", null, true);
+        echo "</h1>
             <div class=\"btn-group\">
                 <div class=\"dropdown ml-2\">
                     <button class=\"btn btn-primary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\"
@@ -86,9 +89,17 @@ class __TwigTemplate_31e6a4c4f01c3a2df453eb25e02e7996256d53706cfa1583c5b09a763ac
                     </button>
                     <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
                         <ul class=\"mr-5\">
+                            <li>
+                                <a href=\"";
+        // line 23
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("video_list", ["categoryname" => twig_lower_filter($this->env, $this->extensions['App\Twig\AppExtension']->slugify(twig_get_attribute($this->env, $this->source, (isset($context["subcategories"]) || array_key_exists("subcategories", $context) ? $context["subcategories"] : (function () { throw new RuntimeError('Variable "subcategories" does not exist.', 23, $this->source); })()), "mainParentName", [], "any", false, false, false, 23))), "id" => twig_get_attribute($this->env, $this->source, (isset($context["subcategories"]) || array_key_exists("subcategories", $context) ? $context["subcategories"] : (function () { throw new RuntimeError('Variable "subcategories" does not exist.', 23, $this->source); })()), "mainParentNameId", [], "any", false, false, false, 23)]), "html", null, true);
+        echo "\">";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["subcategories"]) || array_key_exists("subcategories", $context) ? $context["subcategories"] : (function () { throw new RuntimeError('Variable "subcategories" does not exist.', 23, $this->source); })()), "mainParentName", [], "any", false, false, false, 23), "html", null, true);
+        echo "</a>
+                            </li>
                             ";
-        // line 22
-        echo twig_escape_filter($this->env, (isset($context["subcategories"]) || array_key_exists("subcategories", $context) ? $context["subcategories"] : (function () { throw new RuntimeError('Variable "subcategories" does not exist.', 22, $this->source); })()), "html", null, true);
+        // line 25
+        echo twig_get_attribute($this->env, $this->source, (isset($context["subcategories"]) || array_key_exists("subcategories", $context) ? $context["subcategories"] : (function () { throw new RuntimeError('Variable "subcategories" does not exist.', 25, $this->source); })()), "catergoryList", [], "any", false, false, false, 25);
         echo "
                         </ul>
                     </div>
@@ -113,18 +124,18 @@ class __TwigTemplate_31e6a4c4f01c3a2df453eb25e02e7996256d53706cfa1583c5b09a763ac
 
             <div class=\"row\">
                 ";
-        // line 45
+        // line 48
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["sample_videos"]) || array_key_exists("sample_videos", $context) ? $context["sample_videos"] : (function () { throw new RuntimeError('Variable "sample_videos" does not exist.', 45, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["sample_videos"]) || array_key_exists("sample_videos", $context) ? $context["sample_videos"] : (function () { throw new RuntimeError('Variable "sample_videos" does not exist.', 48, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["video"]) {
-            // line 46
+            // line 49
             echo "                    
                 
                 <div class=\"col-md-4\">
                     <div class=\"card mb-4 shadow-sm\">
                         <div align=\"center\" class=\"embed-responsive embed-responsive-16by9\">
                             <iframe class=\"\" src=\"https://player.vimeo.com/video/";
-            // line 51
+            // line 54
             echo twig_escape_filter($this->env, $context["video"], "html", null, true);
             echo ">\" frameborder=\"0\"
                                 allowfullscreen></iframe>
@@ -151,7 +162,7 @@ class __TwigTemplate_31e6a4c4f01c3a2df453eb25e02e7996256d53706cfa1583c5b09a763ac
                                     <i class=\"fa fa-thumbs-down\"></i>
                                     </button> -->
                                     <a href=\"";
-            // line 75
+            // line 78
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("video_details");
             echo "#video_comments\">Comments (32)</a>
                                 </div>
@@ -165,7 +176,7 @@ class __TwigTemplate_31e6a4c4f01c3a2df453eb25e02e7996256d53706cfa1583c5b09a763ac
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['video'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 83
+        // line 86
         echo "
                 <!-- no members -->
                 <div class=\"col-md-4\">
@@ -185,7 +196,7 @@ class __TwigTemplate_31e6a4c4f01c3a2df453eb25e02e7996256d53706cfa1583c5b09a763ac
                                     <i class=\"fa fa-thumbs-down mr-2\"><small class=\"text-muted\">(9)</small></i>
 
                                     <a href=\"";
-        // line 101
+        // line 104
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("video_details");
         echo "#video_comments\">Comments (32)</a>
                                 </div>
@@ -244,7 +255,7 @@ class __TwigTemplate_31e6a4c4f01c3a2df453eb25e02e7996256d53706cfa1583c5b09a763ac
 
     public function getDebugInfo()
     {
-        return array (  189 => 101,  169 => 83,  155 => 75,  128 => 51,  121 => 46,  117 => 45,  91 => 22,  73 => 6,  71 => 5,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  200 => 104,  180 => 86,  166 => 78,  139 => 54,  132 => 49,  128 => 48,  102 => 25,  95 => 23,  82 => 13,  73 => 6,  71 => 5,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -261,7 +272,7 @@ class __TwigTemplate_31e6a4c4f01c3a2df453eb25e02e7996256d53706cfa1583c5b09a763ac
     <section class=\"jumbotron text-center\">
         <div class=\"container\">
 
-            <h1 class=\"jumbotron-heading\">Category - Funny</h1>
+            <h1 class=\"jumbotron-heading\">Category - {{subcategories.currentCategoryName}}</h1>
             <div class=\"btn-group\">
                 <div class=\"dropdown ml-2\">
                     <button class=\"btn btn-primary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\"
@@ -270,7 +281,10 @@ class __TwigTemplate_31e6a4c4f01c3a2df453eb25e02e7996256d53706cfa1583c5b09a763ac
                     </button>
                     <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
                         <ul class=\"mr-5\">
-                            {{subcategories}}
+                            <li>
+                                <a href=\"{{path('video_list',{'categoryname':subcategories.mainParentName|slugify|lower,'id' :subcategories.mainParentNameId })}}\">{{subcategories.mainParentName}}</a>
+                            </li>
+                            {{subcategories.catergoryList|raw}}
                         </ul>
                     </div>
                 </div>

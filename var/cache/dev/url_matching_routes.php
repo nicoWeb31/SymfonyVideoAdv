@@ -46,7 +46,8 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/video\\-list/category/([^/,]++),([^/]++)(*:209)'
+                .'|/admin/delete\\-category/([^/]++)(*:201)'
+                .'|/video\\-list/category/([^/,]++),([^/]++)(*:249)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -57,7 +58,8 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        209 => [
+        201 => [[['_route' => 'delete_category', '_controller' => 'App\\Controller\\AdminController::deleteCategory'], ['id'], null, null, false, true, null]],
+        249 => [
             [['_route' => 'video_list', '_controller' => 'App\\Controller\\FrontController::videolist'], ['categoryname', 'id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

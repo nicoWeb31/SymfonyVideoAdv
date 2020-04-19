@@ -17,6 +17,7 @@ return [
     '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception_panel::stylesheet'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
     'admin_main_page' => [[], ['_controller' => 'App\\Controller\\AdminController::index'], [], [['text', '/admin/']], [], []],
     'categories' => [[], ['_controller' => 'App\\Controller\\AdminController::categories'], [], [['text', '/admin/categories']], [], []],
+    'delete_category' => [['id'], ['_controller' => 'App\\Controller\\AdminController::deleteCategory'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/delete-category']], [], []],
     'edit_category' => [[], ['_controller' => 'App\\Controller\\AdminController::Editcategory'], [], [['text', '/admin/categories']], [], []],
     'videos' => [[], ['_controller' => 'App\\Controller\\AdminController::videos'], [], [['text', '/admin/videos']], [], []],
     'upload_videos' => [[], ['_controller' => 'App\\Controller\\AdminController::uploadVideos'], [], [['text', '/admin/upload-videos']], [], []],
